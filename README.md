@@ -19,7 +19,7 @@ To set up the project locally, follow these steps:
 
    Run command in command line: `npm install` to install all necessary dependencies.
 
-3. **Run Project**
+## Run Project
 
-   Before running any projects, make sure you're in the right directory. Then, run project with `nodemon ./index.js`.
+Before running any projects, make sure you're in the right directory. Then, run project with `nodemon ./index.js`.
    
