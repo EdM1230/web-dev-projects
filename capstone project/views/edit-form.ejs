@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/update-post" method="POST" class="edit-form">
+    <label for="blog-title">Blog Title:</label>
+    <br>
+    <input type="hidden" name="updateIndex" value="<%= selectedPostIndex %>">
+    <input type="text" id="blog-title-input" name="blog-title" value="<%= post.title %>" maxlength="100" required>
+    <br>
+    <br>
+    <label for="blog-content">Blog Content:</label>
+    <br>
+    <textarea id="blog-content-input" name="blog-content"><%= post.content %></textarea>
+    <br>
+    <div class="button-container">
+        <button type="submit" id="save-edited-content-button">Save</button>
+        <button type="button" id="form-cancel-button"><a href="/">Cancel</a></button>
+    </div>
+</form>
+
+<%- include("partials/footer.ejs") %>

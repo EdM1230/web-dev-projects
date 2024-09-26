@@ -1,0 +1,190 @@
+textarea {
+    resize: none !important;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.shutterstock.com/image-photo/horizontal-banner-cup-coffee-beans-600nw-1803607621.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto -16px;
+    padding-left: 3cm;
+    padding-bottom: 4cm;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: white;
+    margin-left: 50px;
+    padding-top: 2cm;
+    font-size: 5em;
+}
+
+header p {
+    font-family: "Dancing Script", cursive;
+    color: white;
+    margin-left: 50px;
+    padding-top: 0.5cm;
+    font-size: 1.8em;
+}
+
+.post-count {
+    color: rgb(94, 94, 94);
+    margin-top: 1.4cm;
+    margin-left: 1cm
+}
+
+.container {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+#add-post-button {
+    position: absolute;
+    top: 12cm;
+    right: 2cm; 
+    border-radius: 40px;
+    height: 45px;
+    border: none; 
+    width: 190px;
+    margin-bottom: 20px;
+}
+
+.add-post-form, .edit-form {
+    margin-top: 0.8cm;
+}
+
+.add-post-form button, .edit-form button {
+    border: none;
+    width: 100px;
+    margin-top: 1cm !important;
+    background-color: #ddd;
+    padding: 0.5em;
+}
+
+.card-container {
+    margin-top: 3cm;
+}
+
+.post-card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex; /* Ensures buttons are aligned horizontally */
+    gap: 5px; /* Adds space between buttons */
+}
+
+.card-buttons button {
+    width: 40px; /* Adjust size according to SVG dimensions */
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex; /* Center the SVG inside the button */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    border-radius: 50%; /* Makes the button circular */
+}
+
+.card-buttons button:hover {
+    background-color: rgb(172, 172, 172);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.card-body {
+    padding: 15px;
+    height: 5.2cm;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-body h5,
+.card-body p {
+    margin-top: 0.2cm;
+    margin-left: 0.6cm;
+    margin-bottom: 0.2cm;
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+    overflow-wrap: break-word; /* For better support across browsers */
+    white-space: pre-wrap; /* Ensures the text wraps instead of staying on one line */
+}
+
+.post-type-label-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0.6cm;
+}
+
+.label h6{
+    background-color: rgba(87, 106, 255, 0.58);
+    color: black; 
+    padding: 4px 8px; 
+    border-radius: 12px; 
+    font-size: small;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+#blog-title-input {
+    width: 1000px;
+}
+
+#blog-content-input {
+    width: 1000px;
+    height: 300px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+#form-cancel-button {
+    margin-right: 3cm;
+}
+
+#form-cancel-button a {
+    color: white;
+    text-decoration: none;
+}
+
+#post-content-button, #save-edited-content-button, #form-cancel-button {
+    border-radius: 40px;
+}
+
+#post-content-button, #save-edited-content-button {
+    background-color: #ddd;
+}
+
+#form-cancel-button {
+    background: linear-gradient(#0000, rgb(0 0 0/40%)) top/100% 800%;
+    background-color: rgba(255, 0, 0, 0.669);
+    transition: 0.2s;
+}
+
+#post-content-button:hover, #save-edited-content-button:hover, #add-post-button:hover {
+    background-color: rgb(172, 172, 172);
+    cursor: pointer; 
+    transition: background-color 0.2s ease, transform 0.1s ease; 
+}
+
+#form-cancel-button:hover {
+    background-position: bottom;
+  }
+
+footer p {
+    margin-top: 2cm;
+    text-align: center;
+    color: #cacaca;
+}

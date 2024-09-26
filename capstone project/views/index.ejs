@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') %>
+    
+    <form action="/blog-post-creation" method="POST">
+        <button type="submit" id="add-post-button">
+            <img src="/images/pencil-svgrepo-com.svg" alt="pencil-icon" style="width:16px; height:16px; margin-right:0.2cm; margin-bottom: 4px;"/>
+            Write new post!
+        </button>
+    </form>
+
+    <div class="card-container">
+        <h6 class="post-count">All Posts (<%= posts.length %>)</h6>
+        <% posts.forEach((post, index) => { %>
+            <div class="post-card">
+                <div class="card-body">
+                    <div class="post-type-label-box">
+                        <span class="label"><h6>Blog Post</h6></span>
+                    </div>
+                    <h5 class="card-title"><%= post.title %></h5>
+                    <p class="card-content"><%= post.content %></p>
+                    <div class="card-buttons">
+                        <form action="/edit-post" method="GET">
+                            <input type="hidden" name="editIndex" value="<%= index %>">
+                            <button type="submit" class="btn edit-btn">
+                                <img src="/images/edit-1479-svgrepo-com.svg" alt="edit-icon" style="width:16px; height:16px;" />
+                            </button>
+                        </form>
+                        <form action="/delete-post" method="POST">
+                            <input type="hidden" name="postIndex" value="<%= index %>">
+                            <button type="submit" class="btn delete-btn">
+                                <img src="images/trash-can-svgrepo-com.svg" alt="trash-can-icon" style="width:16px; height:16px;" />
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+<%- include("partials/footer.ejs") %>

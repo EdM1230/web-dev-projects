@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/post-content" method="POST" class="add-post-form">
+    <label for="blog-title">Blog Title:</label>
+    <br>
+    <input type="text" id="blog-title-input" name="blog-title" maxlength="100" required>
+    <br>
+    <br>
+    <label for="blog-content">Blog Content:</label>
+    <br>
+    <textarea name="blog-content" id="blog-content-input"></textarea>
+    <br>
+    <div class="button-container">
+        <button type="submit" id="post-content-button">Post</button>
+        <button type="button" id="form-cancel-button"><a href="/">Cancel</a></button>
+    </div>
+</form> 
+
+<%- include("partials/footer.ejs") %>
