@@ -8,4 +8,22 @@ The programming languages used in this project are:
 2. HTML
 3. CSS
 
-Installation guide is in parent directory (README.md).
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the Repository**
+
+   First, clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+
+2. **Install Dependencies**
+
+   Run command in command line: `npm install` to install all necessary dependencies.
+
+## Run Project
+
+Before running any projects, make sure you're in the right directory. Then, run project with `nodemon ./index.js`.
