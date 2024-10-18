@@ -3,8 +3,8 @@ This is a blog posting web application.
 
 The programming languages used in this project are: 
 1. JavaScript
-   Frameworks Used:
-   - Express JS
+   - Frameworks Used:
+      - Express JS
      
 ## Installation
 
