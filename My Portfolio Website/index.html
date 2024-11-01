@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Edmund's Portfolio</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <button class="contact-btn"><span>Contact</span></button>
+        </nav>
+        <section id="home">
+            <div class="intro-container">
+                <div class="greeting">
+                    Hey there, I'm <br/>
+                    <span class="name">Edmund Lee.</span><br/>
+                </div>
+                <h1 class="intro-info-text">A Full-Stack <span>Web Developer</span> and <span>Data Enthusiast.</span></h1>
+                <br/>
+                <div class="slideshow-container">
+                    <!-- Slide -->
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/JavaScript.svg" alt="js-icon" class="tech-icon">
+                        <p class="tech-name">JavaScript</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/HTML5.svg" alt="html5-icon" class="tech-icon">
+                        <p class="tech-name">HTML5</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/CSS3.svg" alt="css3-icon" class="tech-icon">
+                        <p class="tech-name">CSS3</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/React.svg" alt="react-icon" class="tech-icon">
+                        <p class="tech-name">React</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/Express.svg" alt="express-icon" class="tech-icon">
+                        <p class="tech-name">ExpressJS</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/Node.js.svg" alt="nodejs-icon" class="tech-icon">
+                        <p class="tech-name">NodeJS</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/MySQL.svg" alt="mysql-icon" class="tech-icon">
+                        <p class="tech-name">MySQL</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/Python.svg" alt="python-icon" class="tech-icon">
+                        <p class="tech-name">Python</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/My Portfolio Website/assets/icons/Flask.svg" alt="flask-icon" class="tech-icon">
+                        <p class="tech-name">Flask</p>
+                    </div>
+            
+                    <a class="prev" onclick="prevSlide()">&#10094;</a>
+                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                </div>
+                <p class="intro-description">A dedicated self-learner and a skilled craftsman.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-container">
+                <div class="about-section">
+                    <h2 class="about-me-title">About Me</h2>
+                    <div class="about-me-description">
+                        <p>
+                            From a very young age, I have a passion for building things and making imaginations come to life through self-learning.
+                        </p>
+                        <p>
+                            Since then, I have tried many things such as building toys and machines from cardboard, building games in Scratch and creating, filming and editing YouTube videos using different kinds of software like Adobe Photoshop, After Effects and Davinci Resolve. 
+                        </p>    
+                        <p>    
+                            Today, I have managed to settle with building websites and web applications, developing machine learning projects and performing data analysis for problem-solving data projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="projects-showcase-section">
+                <h2 class="project-showcase-title">Projects</h2>
+                <div class="project-container" id="1">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-name">Stock Movement Predictor Web App</div>
+                        <div class="project-description">
+                            <p>Descripton</p>
+                        </div>
+                        <button class="learn-more-btn"><span>Learn More &#8594;</span></button>
+                    </div>
+                </div>
+                <div class="project-container" id="2">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-name">Project Management Web App</div>
+                        <div class="project-description">
+                            <p>Description</p>
+                        </div>
+                        <button class="learn-more-btn"><span>Learn More &#8594;</span></button>
+                    </div>
+                </div>
+                <div class="project-container" id="3">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <div class="project-name">Edmund's Portfolio Website</div>
+                        <div class="project-description">
+                            <p>Description</p>
+                        </div>
+                        <button class="learn-more-btn"><span>Learn More &#8594;</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="contact-section-title">Contact Me</h2>
+            <div class="contact-form-container">
+                <div class="contact-parent">
+                    <div class="contact-child child-1 particle-container">
+                        <p class="call-to-action-text">Let's Make Your <span>Vision</span> Come To Life <span>Together</span>.</p>
+                        <div class="socials-mini-section">
+                            <p class="social-connect-text">Connect with Me:</p>
+                            <span class="social-icons">
+                                <a href="https://github.com/EdM1230"><img src="/assets/icons/GitHub.svg" alt="github-icon"></a>
+                            </span>
+                        </div>
+                        <!-- below are all particles for animation, (honestly do not know why I did this) -->
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+                    <div class="contact-child child-2">
+                        <div class="contact-form">
+                            <h3>I will see you soon.</h3>
+                            <input id="text_name" type="text" placeholder="Name" required>
+                            <input id="text_email" type="text" placeholder="Email" required>
+                            <input id="text_company_name" type="text" placeholder="Company Name">
+                            <input id="text_subject" type="text" placeholder="Subject" required>
+                            <textarea id="txt_message" rows="4" cols="20" placeholder="Leave a meessage..."></textarea>
+                            <br/>
+                            <button type="button" id="btn_send">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&#169; Copyright <span id="current-year"></span></p>
+        </footer>
+    </main>
+<script src="./js/script.js"></script>
+</body>
+</html>
