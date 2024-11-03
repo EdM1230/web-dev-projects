@@ -3,7 +3,7 @@
 }
 
 main {
-    margin: 10px 100px;
+    margin: 10px 100px; 
 }
 
 html {
@@ -28,7 +28,7 @@ nav {
 nav a {
     text-decoration: none;
     color: white;
-    margin: 0 35px; /* Add spacing between links */
+    margin: 0 2.5cm; /* Add spacing between links */
     transition: color 0.3s ease-in-out;
 }
 
@@ -40,6 +40,7 @@ nav a:hover, u:hover {
 .contact-btn {
     position: relative;
     top: 0cm;
+    margin-left: 2.5cm;
     width: 2.8cm;
     height: 0.85cm;
     color: white;
@@ -79,18 +80,19 @@ nav a:hover, u:hover {
     z-index: 2; 
 }
 
-#home {
-    justify-content: center;
-}
-
 .intro-container {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Makes the container take the full viewport height */
 }
 
 .greeting {
     font-size: 36px;
     font-weight: bold;
-    background-image: linear-gradient(to right, #E04555 0%, #AE00FF 30%);
+    background-image: linear-gradient(to right, #E04555 40%, #AE00FF 70%);
     background-clip: text;
     color: transparent;
 }
@@ -114,7 +116,7 @@ nav a:hover, u:hover {
 .slideshow-container {
     margin: 5px;
     position: relative;
-    width: 40%;
+    width: 14cm;
 }
 
 .slide {
@@ -270,20 +272,27 @@ nav a:hover, u:hover {
     margin-top: 2cm;
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 10px;
-    border: 1px solid #EB949E;
-    padding: 1cm 0;
-    width: 100%;
+    border: 1px solid transparent;
+    padding: 1cm 1cm;
+    width: auto;
     height: auto;
     display: grid;
-    grid-template-columns: 0.5fr 2fr; /* Adjusted for content (text) and the button */
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.7cm;
     overflow: hidden;
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-container:hover {
+    border: 1px solid #EB949E;
+    transform: translateY(-3%);
+    box-shadow: 0 10px 7px rgb(21, 0, 0);
 }
 
 .project-img {
     background-color: white;
     border-radius: 10px;
-    margin-left: 1cm;
-    width: 13cm;
+    width: 100%;
     height: 8cm;
     justify-self: start;
 }
@@ -292,14 +301,12 @@ nav a:hover, u:hover {
     display: grid;
     grid-template-rows: 0.5fr 1fr 0.5;
     row-gap: 20px;
-    margin-left: 0.7cm;
 }
 
 .project-name {
     color: white;
     align-self: flex-end;
     font-size: 27px;
-    transition: color 0.3s ease-in-out;
 }
 
 .project-description {
@@ -490,7 +497,7 @@ nav a:hover, u:hover {
 }
 
 .contact-form textarea {
-    resize: vertical;
+    resize: none;
 }
 
 .contact-form button{
@@ -502,7 +509,7 @@ nav a:hover, u:hover {
     color:#fff;
     margin:30px 0;
     border-radius: 12px;
-    transition:0.3s ease-in-out;
+    transition: 0.3s ease-in-out
 }
 
 .contact-form button:hover{
@@ -525,15 +532,13 @@ nav a:hover, u:hover {
 .particle {
     position: absolute;
     bottom: 0;
-    width: 10px;
-    height: 10px;
     background-color:rgb(235, 148, 158, 0.8);
     border-radius: 50%;
     animation: float 5s linear infinite;
     opacity: 0;
-    box-shadow: 0 0 10px rgba(235, 148, 158, 0.5), 
-                0 0 20px rgba(235, 148, 158, 0.5), 
-                0 0 30px rgba(235, 148, 158, 0.5);
+    box-shadow: 0 0 10px rgba(215, 161, 167, 0.5), 
+                0 0 20px rgba(215, 161, 167, 0.5), 
+                0 0 30px rgba(215, 161, 167, 0.5);
 
 }
 
@@ -625,9 +630,5 @@ nav a:hover, u:hover {
 
 footer {
     text-align: center;
-    color: grey;
-}
-
-#current-year {
     color: grey;
 }
