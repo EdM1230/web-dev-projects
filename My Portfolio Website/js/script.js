@@ -1,8 +1,24 @@
+// Menu function
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const links = dropdownMenu.querySelectorAll('a');
+
+function toggleMenu() {
+    dropdownMenu.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+}
+
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+        document.body.classList.remove('no-scroll');
+        dropdownMenu.classList.remove('active');
+    })
+})
+
 // Tech stack slideshow 
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 const PREVIOUSTECH = "prev-tech";
-const ACTIVETECH = "active";
+const ACTIVETECH = "active-tech";
 const NEXTTECH = "next-tech";
 let currentSlideIndex = 0;
 let prevSlideIndex;
