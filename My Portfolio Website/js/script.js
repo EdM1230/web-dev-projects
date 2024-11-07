@@ -61,6 +61,27 @@ function resetVisibilityType() {
 initSlideshow();
 
 
+// Scroll-in animation script
+
+const observerSlide = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+            if (entry.isIntersecting) {
+                observerSlide.unobserve(entry.target);
+            }
+        }, {threshold: 1})
+    }
+)
+
+const aboutMeDescription = document.querySelector('.about-me-description');
+const projectContainers = document.querySelectorAll('.project-container');
+
+observerSlide.observe(aboutMeDescription);
+projectContainers.forEach(container => {
+    observerSlide.observe(container);
+})
+
 // Contact button scroll
 document.querySelector('.contact-btn').addEventListener('click', () => {
     document.querySelector('#contact').scrollIntoView({ 

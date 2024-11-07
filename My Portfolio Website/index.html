@@ -9,8 +9,8 @@
 </head>
 <body>
     <main>
-        <div class="dropdown-menu-icon" onclick="toggleMenu()">
-            <img src="/My Portfolio Website/assets/icons/menu-svgrepo-com.svg" alt="menu-icon">
+        <div class="dropdown-menu-icon">
+            <img src="/My Portfolio Website/assets/icons/menu-svgrepo-com.svg" alt="menu-icon" onclick="toggleMenu()">
         </div>
         <div class="dropdown-menu">
             <a href="#home">Home</a>
@@ -75,7 +75,7 @@
                         <a class="prev" onclick="prevSlide()">&#10094;</a>
                         <a class="next" onclick="nextSlide()">&#10095;</a>
                     </div>
-                    <p class="intro-description">Building strategic and understandable websites and web apps for non-technical people.</p>
+                    <p class="intro-description">Building strategic and understandable websites and web apps.</p>
                 </div>
             </section>
 
@@ -85,7 +85,7 @@
                     <div class="profile-pic">
 
                     </div>
-                    <div class="about-me-description">
+                    <div class="about-me-description scroll-in-left">
                         <p>
                             From a very young age, I have a passion for building things and making imaginations come to life through self-learning.
                         </p>
@@ -93,16 +93,16 @@
                             Since then, I have tried many things such as building toys and machines from cardboard, building games in Scratch and creating, filming and editing YouTube videos using different kinds of software like Adobe Photoshop, After Effects and Davinci Resolve. 
                         </p>    
                         <p>    
-                            Today, I have managed to settle with building websites and web applications, developing machine learning projects and performing data analysis for problem-solving data projects.
+                            Today, I have managed to settle with <span>building websites and web applications</span>, <span>developing machine learning projects</span> and <span>performing data analysis for problem-solving data projects</span>.
                         </p>
                     </div>
                 </div>
             </section>
 
             <section id="projects">
-                <div class="projects-showcase-section">
-                    <h2 class="project-showcase-title">Projects</h2>
-                    <div class="project-container" id="1">
+                <h2 class="project-showcase-title">Projects</h2>
+                <div class="project-showcase">
+                    <div class="project-container scroll-in-left" id="1">
                         <div class="project-img"></div>
                         <div class="project-info">
                             <div class="project-name">Stock Movement Predictor Web App</div>
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-container" id="2">
+                    <div class="project-container scroll-in-right" id="2">
                         <div class="project-info">
                             <div class="project-name">Project Management Web App</div>
                             <div class="project-description">
@@ -126,7 +126,7 @@
                         </div>
                         <div class="project-img"></div>
                     </div>
-                    <div class="project-container" id="3">
+                    <div class="project-container scroll-in-left" id="3">
                         <div class="project-img"></div>
                         <div class="project-info">
                             <div class="project-name">Edmund's Portfolio Website</div>
@@ -179,6 +179,7 @@
                 </div>
             </section>
             <footer>
+                Designed & Built by Edmund Lee <br/>
                 <p>&#169; Copyright <span id="current-year"></span></p>
             </footer>
         </div>
