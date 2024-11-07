@@ -540,11 +540,9 @@ nav a:hover, u:hover {
     box-shadow: 0 10px 7px rgb(21, 0, 0);
 }
 
-.project-img {
-    background-color: white;
+.project-img img {
     border-radius: 10px;
     width: 100%;
-    height: 8cm;
     justify-self: start;
 }
 
