@@ -185,8 +185,8 @@ nav a:hover, u:hover {
     }
 }
 
-/* Mobile view */
-@media (max-width: 430px) {
+/* Smaller screen view */
+@media (max-width: 634px) {
     .main-content {
         margin: 5px 50px;
     }
@@ -347,6 +347,25 @@ nav a:hover, u:hover {
     font-size: 17px;
 }
 
+/* Larger resolutions */
+@media (min-width: 1440px) {
+    .greeting {
+        font-size: 33.75px;
+    }   
+
+    .name {
+        font-size: 135px;
+    }
+
+    .intro-info-text {
+        font-size: 33.75px;
+    }
+
+    .intro-description {
+        font-size: 25.3125px;
+    }
+}
+
 /* Tablet resolution */
 @media (max-width: 768px) {
     .greeting {
@@ -449,8 +468,15 @@ nav a:hover, u:hover {
     grid-column: 2;
 }
 
-.about-me-description span {
-    color: #EB949E;
+@media (min-width: 1440px) {
+    .about-me-title {
+        font-size: 33.75px;
+    }
+
+    .about-me-description {
+        font-size: 25.3125px;
+        line-height: 0.984375cm;
+    }
 }
 
 /* Tablet resolution */
@@ -473,7 +499,6 @@ nav a:hover, u:hover {
         line-height: 0.525cm;
     }
 }
-
 
 #projects {
     margin-top: 15cm;
@@ -567,6 +592,35 @@ nav a:hover, u:hover {
     filter: invert(72%) sepia(29%) saturate(737%) hue-rotate(307deg) brightness(92%) contrast(101%);
 }
 
+/* Higher resolution */
+@media (min-width: 1440px) {
+    .project-showcase-title {
+        font-size: 33.75px;
+    }
+
+    .project-name {
+        font-size: 37.96875px;
+    }
+
+    .project-description {
+        font-size: 20.25px;
+    }
+
+    .project-container {
+        height: 40vh;
+    }
+
+    .project-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .github-redirect-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 /* Tablet resolution */
 @media (max-width: 768px) {
     .project-showcase-title {
@@ -577,6 +631,7 @@ nav a:hover, u:hover {
     .project-container {
         /* background-image: ; */
         display: flex;
+        height: 50vh;
         position: relative;
         background-size: cover;
         background-position: center;
@@ -614,6 +669,12 @@ nav a:hover, u:hover {
     background-image: linear-gradient(to right, #E04555 45%, #AE00FF 63%);
     background-clip: text;
     color: transparent;
+}
+
+@media (min-width: 1440px) {
+    .contact-section-title {
+        font-size: 33.75px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -657,6 +718,17 @@ nav a:hover, u:hover {
     font-weight: bold;
     color: white;
     z-index: 1;
+}
+
+/* Larger resolution */
+@media (min-width: 1440px) {
+    .contact-parent {
+        height: 20cm;
+    }
+
+    .child-1 .call-to-action-text {
+        font-size: 70.3125px;
+    }
 }
 
 /* Laptop resolution */
@@ -897,6 +969,16 @@ nav a:hover, u:hover {
     left: 86%;
     animation-duration: 5s;
     animation-delay: 1s;
+}
+
+@media (max-width: 634px) {
+    .contact-parent {
+        display: block; 
+    }
+
+    .contact-form h3 {
+        display: none;
+    }
 }
 
 footer {
