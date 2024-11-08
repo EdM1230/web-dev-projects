@@ -526,6 +526,13 @@ nav a:hover, u:hover {
     transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.project-container:nth-child(even) .project-info {
+    order: 1; 
+}
+.project-container:nth-child(even) .project-img {
+    order: 2; 
+}
+
 .project-container:first-of-type {
     margin-top: 1cm;
 }
@@ -627,9 +634,8 @@ nav a:hover, u:hover {
     }
 
     .project-container {
-        /* background-image: ; */
         display: flex;
-        height: 50vh;
+        min-height: 60vh;
         position: relative;
         background-size: cover;
         background-position: center;
