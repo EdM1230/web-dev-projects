@@ -93,47 +93,34 @@ document.querySelector('.contact-btn').addEventListener('click', () => {
 
 projectContainers.forEach(container => {
     container.addEventListener('mouseover', () => {
-        const selectedContainerID = parseInt(container.id);
-        const imgElement = container.firstElementChild.firstElementChild;
-        if(selectedContainerID === 1) {
-            imgElement.setAttribute('src', '/My Portfolio Website/images/PythonStockPredictionWebAppPreview-ezgif.com-optimize.gif');
-        } else if(selectedContainerID === 2) {
-            imgElement.setAttribute('src', '/My Portfolio Website/images/EzManagePreviewvideo-ezgif.com-video-to-gif-converter.gif');
+        const SELECTED_CONTAINER_ID = parseInt(container.id);
+        const IMG_ELEMENT = container.firstElementChild.firstElementChild;
+        const ACCEPTABLE_RESOLUTION = 768;
+        if(SELECTED_CONTAINER_ID === 1) {
+            if(window.screen.width > ACCEPTABLE_RESOLUTION) {
+                IMG_ELEMENT.setAttribute('src', '/My Portfolio Website/images/PythonStockPredictionWebAppPreview-ezgif.com-optimize.gif');
+            } else {}
+        } else if(SELECTED_CONTAINER_ID === 2) {
+            if(window.screen.width > ACCEPTABLE_RESOLUTION) {
+                IMG_ELEMENT.setAttribute('src', '/My Portfolio Website/images/EzManagePreviewvideo-ezgif.com-video-to-gif-converter.gif');
+            } else {}
         }
     });
-
     container.addEventListener('mouseout', () => {
-        const selectedContainerID = parseInt(container.id);
-        const imgElement = container.firstElementChild.firstElementChild;
-        if(selectedContainerID === 1) {
-            imgElement.setAttribute('src', '/My Portfolio Website/images/Stock Prediction Web App.png');
-        } else if(selectedContainerID === 2) {
-            imgElement.setAttribute('src', '/My Portfolio Website/images/EZManage Web App.png');
+        const SELECTED_CONTAINER_ID = parseInt(container.id);
+        const IMG_ELEMENT = container.firstElementChild.firstElementChild;
+        const ACCEPTABLE_RESOLUTION = 768;
+        if(SELECTED_CONTAINER_ID === 1) {
+            if(window.screen.width > ACCEPTABLE_RESOLUTION) {
+                IMG_ELEMENT.setAttribute('src', '/My Portfolio Website/images/Stock Prediction Web App.png');
+            } else {}
+        } else if(SELECTED_CONTAINER_ID === 2) {
+            if(window.screen.width > ACCEPTABLE_RESOLUTION) {
+                IMG_ELEMENT.setAttribute('src', '/My Portfolio Website/images/EZManage Web App.png');
+            } else {}
         }
     });
 });
-
-// Project showcase resolution change
-// function setImagesAsBackgrounds() {
-//     projectContainers.forEach(container => {
-//         const imgElement = container.firstElementChild.firstElementChild;
-        
-//         if (window.innerWidth <= 768) {
-//             if (imgElement && !container.style.backgroundImage) {
-//                 container.style.backgroundImage = `url(${imgElement.src})`;
-//                 container.style.backgroundSize = 'cover';
-//                 container.style.backgroundPosition = 'center';
-//                 container.style.backgroundRepeat = 'no-repeat';
-//                 imgElement.style.display = 'none'; 
-//             }
-//         } 
-//     });
-// }
-// setImagesAsBackgrounds();
-// document.addEventListener('DOMContentLoaded', () => {
-//     setImagesAsBackgrounds(); 
-// });
-
 
 // Dynamically display current year in footer 
 document.getElementById('current-year').textContent = new Date().getFullYear();

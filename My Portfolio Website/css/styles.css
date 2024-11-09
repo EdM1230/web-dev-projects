@@ -42,21 +42,48 @@ body::-webkit-scrollbar {
 }
 
 nav {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    justify-content: end; 
+    align-items: center;
+    padding: 20px 0;
+}
+
+.minimized-nav .logo {
+    display: none;
+}
+
+.logo {
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    padding: 20px;
+    align-items: center;
+    order: 1;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.logo img:hover {
+    cursor: pointer;
+}
+
+.section-links {
+    display: flex;
+    justify-content: flex-end;
+    order: 2;
 }
 
 nav a {
     text-decoration: none;
     color: white;
-    margin: 0 2.5cm; /* Add spacing between links */
+    margin-left: 1.2cm;
     transition: color 0.3s ease-in-out;
+    align-self: center;
 }
 
 nav a:hover, u:hover { 
-    color: #EB949E; /* This will change the color on hover */
+    color: #EB949E; 
 }
 
 .dropdown-menu-icon img {
@@ -80,7 +107,7 @@ nav a:hover, u:hover {
 .contact-btn {
     position: relative;
     top: 0cm;
-    margin: 0 2.5cm;
+    margin-left: 1.2cm;
     min-width: 2.8cm;
     height: 0.85cm;
     color: white;
@@ -127,7 +154,7 @@ nav a:hover, u:hover {
     }
 
     nav a, .contact-btn {
-        margin: 0 1.5cm;
+        margin-left: 0.7cm;
     }
 
 }
@@ -142,14 +169,24 @@ nav a:hover, u:hover {
         display: none;
     }
 
+    .minimized-nav {
+        margin: 0 100px;
+    }
+
+    .minimized-nav .logo {
+        display: block;
+        position: absolute;
+        top: 0.4cm;
+        left: 47%;
+    }
+
     .dropdown-menu-icon {
         display: flex;
-        justify-content: center;
+        position: relative;
         align-items: center;
-        left: 50%;
-        right: 50%;
-        top: 4%;
-        position: absolute;
+        justify-content: flex-end;
+        height: 2cm;
+        order: 2;
     }
 
     .dropdown-menu-icon img {
@@ -182,6 +219,12 @@ nav a:hover, u:hover {
     
     .dropdown-menu.active a:hover, .dropdown-menu.active u:hover { 
         color: #EB949E; 
+    }
+}
+
+@media (max-width: 634px) {
+    .minimized-nav {
+        margin: 0 50px;
     }
 }
 
@@ -549,6 +592,7 @@ nav a:hover, u:hover {
 
 .project-img img {
     border-radius: 10px;
+    height: 100%;
     width: 100%;
     justify-self: start;
 }
@@ -635,15 +679,41 @@ nav a:hover, u:hover {
 
     .project-container {
         display: flex;
-        min-height: 60vh;
+        min-height: 50vh;
         position: relative;
         background-size: cover;
         background-position: center;
         column-gap: 0;
     }
 
+    .project-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5; /* Set your desired opacity */
+        filter: blur(10px);
+        z-index: -1; /* Places it behind the content */
+    }
+
     .project-img {
         display: none;
+    }
+
+    .project-container:nth-child(1)::before {
+        background-image: linear-gradient(rgb(34, 0, 0, 0.7), rgb(34, 0, 0, 0.7)), url('/My Portfolio Website/images/Stock Prediction Web App.png');
+    }
+    
+    .project-container:nth-child(2)::before {
+        background-image: linear-gradient(rgb(34, 0, 0, 0.7), rgb(34, 0, 0, 0.7)), url('/My Portfolio Website/images/EZManage Web App.png');
+    }
+    
+    .project-container:nth-child(3)::before {
+        background-image: linear-gradient(rgb(34, 0, 0, 0.7), rgb(34, 0, 0, 0.7)), url('/My Portfolio Website/images/Portfolio Website Preview.png');
     }
 
     .project-name {
@@ -657,6 +727,7 @@ nav a:hover, u:hover {
     .github-redirect-btn {
         width: 18.75px;
         height: 18.75px;
+        z-index: 2;
     }
 }
 
