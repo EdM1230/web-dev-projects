@@ -30,6 +30,7 @@ html {
 
 body {
     background-color: #220000;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -590,17 +591,17 @@ nav a:hover, u:hover {
     box-shadow: 0 10px 7px rgb(21, 0, 0);
 }
 
+.project-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .project-img img {
     border-radius: 10px;
     height: 100%;
     width: 100%;
-    justify-self: start;
-}
-
-@media screen and (max-width: 1024px) {
-    .project-img {
-        height: 6.5cm;
-    }
+    object-fit: contain;
 }
 
 .project-info {
@@ -656,7 +657,7 @@ nav a:hover, u:hover {
     }
 
     .project-container {
-        height: 40vh;
+        max-height: 40vh;
     }
 
     .project-img {

@@ -1,9 +1,16 @@
 // Menu function
 const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownMenuImg = document.querySelector('.dropdown-menu-icon img')
 const links = dropdownMenu.querySelectorAll('a');
 
 function toggleMenu() {
     dropdownMenu.classList.toggle('active');
+    var isMenuToggled = dropdownMenu.classList.contains('active');
+    if(isMenuToggled) {
+        dropdownMenuImg.setAttribute('src', '/My Portfolio Website/assets/icons/close-svgrepo-com.svg');
+    } else if(!isMenuToggled) {
+        dropdownMenuImg.setAttribute('src', '/My Portfolio Website/assets/icons/menu-svgrepo-com.svg');
+    }
     document.body.classList.toggle('no-scroll');
 }
 
@@ -90,7 +97,6 @@ document.querySelector('.contact-btn').addEventListener('click', () => {
 });
 
 // Project hover showcase gif
-
 projectContainers.forEach(container => {
     container.addEventListener('mouseover', () => {
         const SELECTED_CONTAINER_ID = parseInt(container.id);
