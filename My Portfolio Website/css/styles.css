@@ -148,7 +148,7 @@ nav a:hover, u:hover {
 }
 
 /* Laptop view */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .main-content {
         margin: 10px 100px;
     }
@@ -160,7 +160,7 @@ nav a:hover, u:hover {
 }
 
 /* Tablet view */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     nav, nav a{
         display: none;
     }
@@ -222,14 +222,14 @@ nav a:hover, u:hover {
     }
 }
 
-@media (max-width: 634px) {
+@media screen and (max-width: 634px) {
     .minimized-nav {
         margin: 0 50px;
     }
 }
 
 /* Smaller screen view */
-@media (max-width: 634px) {
+@media screen and (max-width: 634px) {
     .main-content {
         margin: 5px 50px;
     }
@@ -391,7 +391,7 @@ nav a:hover, u:hover {
 }
 
 /* Larger resolutions */
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .greeting {
         font-size: 33.75px;
     }   
@@ -410,7 +410,7 @@ nav a:hover, u:hover {
 }
 
 /* Tablet resolution */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .greeting {
         font-size: 18px;
     }
@@ -455,7 +455,7 @@ nav a:hover, u:hover {
     }
 }
 
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
 
     .name {
         font-size: 45px;
@@ -511,7 +511,7 @@ nav a:hover, u:hover {
     grid-column: 2;
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .about-me-title {
         font-size: 33.75px;
     }
@@ -523,7 +523,7 @@ nav a:hover, u:hover {
 }
 
 /* Tablet resolution */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .about-container {
         display: grid;
@@ -597,7 +597,7 @@ nav a:hover, u:hover {
     justify-self: start;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .project-img {
         height: 6.5cm;
     }
@@ -642,7 +642,7 @@ nav a:hover, u:hover {
 }
 
 /* Higher resolution */
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .project-showcase-title {
         font-size: 33.75px;
     }
@@ -671,7 +671,7 @@ nav a:hover, u:hover {
 }
 
 /* Tablet resolution */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .project-showcase-title {
         font-size: 17px;
         background-image: linear-gradient(to right, #E04555 0%, #AE00FF 20%);
@@ -746,19 +746,19 @@ nav a:hover, u:hover {
     color: transparent;
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .contact-section-title {
         font-size: 33.75px;
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .contact-section-title {
         font-size: 18px;
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .contact-section-title {
         background-image: linear-gradient(to right, #E04555 25%, #AE00FF 73%);
     }
@@ -796,7 +796,7 @@ nav a:hover, u:hover {
 }
 
 /* Larger resolution */
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .contact-parent {
         height: 20cm;
     }
@@ -807,7 +807,7 @@ nav a:hover, u:hover {
 }
 
 /* Laptop resolution */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .child-1 .call-to-action-text {
         font-size: 50px;
     }
@@ -815,7 +815,7 @@ nav a:hover, u:hover {
 }
 
 /* Tablet resolution */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .child-1 .call-to-action-text {
         margin: 0.75cm 0.75cm;
         font-size: 37.5px;
@@ -834,7 +834,7 @@ nav a:hover, u:hover {
 }
 
 /* Tablet resolution */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .socials-mini-section {
         font-size: 15px;
         margin: 0.75cm 0.75cm;
@@ -848,7 +848,7 @@ nav a:hover, u:hover {
     transition: 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .social-icons img {
         height: 22.5px;
         width: 22.5px;
@@ -920,7 +920,7 @@ nav a:hover, u:hover {
     border: 1px solid #EB949E;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .contact-form h3 {
         font-size: 13.5px;
     }
@@ -1046,7 +1046,7 @@ nav a:hover, u:hover {
     animation-delay: 1s;
 }
 
-@media (max-width: 634px) {
+@media screen and (max-width: 634px) {
     .contact-parent {
         display: block; 
     }
