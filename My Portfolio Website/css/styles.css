@@ -492,7 +492,31 @@ nav a:hover, u:hover {
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
     height: 100vh;
+}
+
+.profile-pic {
+    position: relative;
+    display: inline-block;
+    justify-content: flex-end;
+}
+
+.profile-pic img {
+    display: block;
+    max-height: 80%;
+    max-width: 100%;
+}
+
+.profile-pic::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    background: linear-gradient(to bottom, rgb(34, 0, 0, 0) 0%, rgb(34, 0, 0, 1) 80%);
+    pointer-events: none;
 }
 
 .about-me-title {
