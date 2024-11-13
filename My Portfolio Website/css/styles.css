@@ -945,6 +945,12 @@ nav a:hover, u:hover {
     resize: none;
 }
 
+.submission-result {
+    background-image: linear-gradient(to right, #E04555 0%, #AE00FF 35%);
+    background-clip: text;
+    color: transparent;
+}
+
 .contact-form button{
     background-color:#EB949E;
     border: none;

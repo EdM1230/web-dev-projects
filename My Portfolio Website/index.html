@@ -183,12 +183,17 @@
                         <div class="contact-child child-2">
                             <div class="contact-form">
                                 <h3>Get back to you soon.</h3>
-                                <input id="text_name" type="text" placeholder="Name" required>
-                                <input id="text_email" type="text" placeholder="Email" required>
-                                <input id="text_company_name" type="text" placeholder="Company Name">
-                                <textarea id="txt_message" rows="4" cols="20" placeholder="Leave a meessage..."></textarea>
+                                <form method="POST" id="form">
+                                    <input type="hidden" name="access_key" value="e86927fb-b7b9-4b0a-a3bb-9477cb05d4cc">
+                                    <input id="text_name" type="text" placeholder="Name" name="name" required>
+                                    <input id="text_email" type="text" placeholder="Email" name="email" required>
+                                    <input id="text_company_name" type="text"  name="company-name" placeholder="Company Name">
+                                    <textarea id="txt_message" rows="4" cols="20" placeholder="Leave a meessage..." name="message" required></textarea>
+
+                                    <div class="submission-result"></div>                                          
                                 <br/>
-                                <button type="button" id="btn_send">Send</button>
+                                <button type="submit" id="btn_send">Send</button>
+                            </form> 
                             </div>
                         </div>
                     </div>

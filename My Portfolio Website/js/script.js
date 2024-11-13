@@ -128,5 +128,45 @@ projectContainers.forEach(container => {
     });
 });
 
+// Contact form script
+const form = document.getElementById('form');
+const submissionResult = document.querySelector('.submission-result');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    submissionResult.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status === 200) {
+                submissionResult.innerHTML = "Form submitted successfully";
+            } else {
+                console.log(response);
+                submissionResult.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            submissionResult.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                submissionResult.style.display = "none";
+            }, 3000);
+        });
+    });
+
 // Dynamically display current year in footer 
 document.getElementById('current-year').textContent = new Date().getFullYear();
